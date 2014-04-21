@@ -6,9 +6,9 @@ base=`scripts/get_kernel_base_addr`
 
 if [ "$cmd_line" == "" ]
 then
-  ./tools/mkbootimg --kernel zImage-dtb --ramdisk ramdisk.gz -o arkenstone.img --base $base $ramdisk_params
+  ./tools/mkbootimg --kernel zImage-dtb --ramdisk ramdisk.gz -o kernel.img --base $base $ramdisk_params
 else
-  ./tools/mkbootimg --kernel zImage-dtb --ramdisk ramdisk.gz --cmdline "$cmd_line" -o arkenstone.img --base $base $ramdisk_params
+  ./tools/mkbootimg --kernel zImage-dtb --ramdisk ramdisk.gz --cmdline "$cmd_line" -o kernel.img --base $base $ramdisk_params
 fi
 
 
